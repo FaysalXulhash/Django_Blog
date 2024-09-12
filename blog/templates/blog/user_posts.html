@@ -1,5 +1,7 @@
 {% extends "blog/base.html" %}
 {% block content %}
+<h1 class="mb-4 text-center">Posts by - {{ view.kwargs.username }} ({{ page_obj.paginator.count }}) </h1>
+<hr>
     {% for post in posts %}
         <article class="media content-section">
           <img class="rounded-circle article-img" src="{{post.author.profile.img.url}}" alt="">
@@ -13,7 +15,6 @@
           </div>
         </article>
     {% endfor %}
-
 <div class="container text-center">
   <!-- pagination start -->
     {% if is_paginated %}
@@ -37,6 +38,5 @@
 
     {% endif %}
 <!-- pagination end -->
-
 </div>
 {% endblock content %}
