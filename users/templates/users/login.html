@@ -10,10 +10,11 @@
         </fieldset>
         <div class="form-group text-center">
             <button class='btn btn-outline-success ' type='submit'>Log In</button>
+            <a class='ml-2' href="{% url 'password_reset' %}">Forget Password?</a>
         </div>
        </form>
        <div class="border-top pt-3">
-        <small class'text-mutued'>Need have an account? <a class='ml-2' href="{% url 'register' %}">Sing In here</a></small>
+        <small class'text-mutued'>Need have an account?<a class='ml-2' href="{% url 'register' %}">Sing In here</a></small>
        </div>
     </div>
     
